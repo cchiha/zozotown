@@ -54,6 +54,8 @@ Things you may want to cover:
 
 ## itemsテーブル
 
+|Column|Type|Options|
+|------|----|-------|
 |name|string|null: false|
 |shop_id|integer|null: false, foreign_key: true, add_index|
 |brand_id|integer|null: false, foreign_key: true, add_index|
@@ -80,6 +82,8 @@ Things you may want to cover:
 
 ## imagesテーブル
 
+|Column|Type|Options|
+|------|----|-------|
 |image_url|string|null: false|
 |item_id|integer|null: false, foreign_key: true, add_index|
 
@@ -88,6 +92,8 @@ Things you may want to cover:
 
 ## stocksテーブル
 
+|Column|Type|Options|
+|------|----|-------|
 |stock|integer|null: false|
 |item_id|integer|null: false, foreign_key: true, add_index|
 |color|string|null: false|
@@ -100,6 +106,8 @@ Things you may want to cover:
 
 ## favorite_itemテーブル
 
+|Column|Type|Options|
+|------|----|-------|
 |item_id|integer|null: false, foreign_key: true, add_index|
 |user_id|integer|null: false, foreign_key: true, add_index|
 
@@ -109,6 +117,8 @@ Things you may want to cover:
 
 ## favorite_brandテーブル
 
+|Column|Type|Options|
+|------|----|-------|
 |brand_id|integer|null: false, foreign_key: true, add_index|
 |user_id|integer|null: false, foreign_key: true, add_index|
 
@@ -118,6 +128,8 @@ Things you may want to cover:
 
 ## favorite_shopテーブル
 
+|Column|Type|Options|
+|------|----|-------|
 |shop_id|integer|null: false, foreign_key: true, add_index|
 |user_id|integer|null: false, foreign_key: true, add_index|
 
@@ -127,6 +139,8 @@ Things you may want to cover:
 
 ## cartテーブル
 
+|Column|Type|Options|
+|------|----|-------|
 |user_id|integer|null: false, foreign_key: true, add_index|
 |item_id|integer|null: false, foreign_key: true, add_index|
 |total_price|integer|null: false|
@@ -138,6 +152,8 @@ Things you may want to cover:
 
 ## brandテーブル
 
+|Column|Type|Options|
+|------|----|-------|
 |name|string|null: false, unique: true|
 |description|text||
 |item_id|integer|null: false, foreign_key: true, add_index|
@@ -148,6 +164,8 @@ Things you may want to cover:
 
 ## shopテーブル
 
+|Column|Type|Options|
+|------|----|-------|
 |name|string|null: false, unique: true|
 |description|text||
 |item_id|integer|null: false, foreign_key: true, add_index|
@@ -158,6 +176,8 @@ Things you may want to cover:
 
 ## categoryテーブル
 
+|Column|Type|Options|
+|------|----|-------|
 |name|string|null: false, unique: true|
 
 ### Association
@@ -166,6 +186,8 @@ Things you may want to cover:
 
 ## sub_categoryテーブル
 
+|Column|Type|Options|
+|------|----|-------|
 |name|string|null: false, unique: true|
 |category_id|integer|null: false, foreign_key: true, add_index|
 
@@ -175,6 +197,8 @@ Things you may want to cover:
 
 ## deliveryテーブル
 
+|Column|Type|Options|
+|------|----|-------|
 |name|string|null: false|
 |postal_cord|integer|null: false|
 |address|text|null: false|
@@ -185,6 +209,8 @@ Things you may want to cover:
 
 ## credit_cardテーブル
 
+|Column|Type|Options|
+|------|----|-------|
 |user_id|integer|null: false, foreign_key: true, add_index|
 |name|string|null: false|
 |card_number|integer|null: false|
@@ -197,6 +223,8 @@ Things you may want to cover:
 
 ## orderテーブル
 
+|Column|Type|Options|
+|------|----|-------|
 |user_id|integer|null: false, foreign_key: true, add_index|
 |cart_id|integer|null: false, foreign_key: true, add_index|
 |delivery_id|integer|null: false, foreign_key: true, add_index|
@@ -214,6 +242,8 @@ Things you may want to cover:
 
 ## paymentテーブル
 
+|Column|Type|Options|
+|------|----|-------|
 |method|string|null: false|
 |price|integer|null: false|
 |coupon|integer||
@@ -223,6 +253,8 @@ Things you may want to cover:
 
 ## check_itmesテーブル
 
+|Column|Type|Options|
+|------|----|-------|
 |user_id|integer|null: false, foreign_key: true, add_index|
 |itme_id|integer|null: false, foreign_key: true, add_index|
 
@@ -231,6 +263,9 @@ Things you may want to cover:
 - belongs_to :items
 
 ## check_shopsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
 |user_id|integer|null: false, foreign_key: true, add_index|
 |shop_id|integer|null: false, foreign_key: true, add_index|
 
