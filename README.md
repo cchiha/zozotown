@@ -29,7 +29,7 @@ Things you may want to cover:
 |------|----|-------|
 |first_name|string|null: false|
 |last_name|string|null: false|
-|gender|string|null: false|
+|gender|enum|null: false|
 |birth_year|integer|null: false|
 |birth_month|integer|null: false|
 |birth_day|integer|null: false|
@@ -69,7 +69,7 @@ Things you may want to cover:
 
 ### Association
 - has_many :users
-- has_many :images
+- has_many :item_images
 - has_many :stocks
 - has_many :favorite_item
 - has_many :cart
@@ -80,11 +80,11 @@ Things you may want to cover:
 - has_many :order
 - has_many :check_items
 
-## imagesテーブル
+## item_imagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|image_url|string|null: false|
+|image|string|null: false|
 |item_id|integer|null: false, foreign_key: true, add_index|
 
 ### Association
