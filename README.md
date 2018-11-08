@@ -59,7 +59,7 @@ Things you may want to cover:
 |name|string|null: false|
 |shop_id|integer|null: false, foreign_key: true, add_index|
 |brand_id|integer|null: false, foreign_key: true, add_index|
-|image_id|integer|null: false, foreign_key: true, add_index|
+|item_image_id|integer|null: false, foreign_key: true, add_index|
 |price|integer|null: false|
 |description|text||
 |stock_id|integer|null: false, foreign_key: true, add_index|
@@ -98,11 +98,11 @@ Things you may want to cover:
 |item_id|integer|null: false, foreign_key: true, add_index|
 |color|string|null: false|
 |size|string|null: false|
-|image_id|integer|null: false, foreign_key: true, add_index|
+|item_image_id|integer|null: false, foreign_key: true, add_index|
 
 ### Association
 - belongs_to :items
-- has_one :images
+- has_one :item_images
 
 ## favorite_itemテーブル
 
